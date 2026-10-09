@@ -1,0 +1,19 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /memories/{fileName} {
+      // Foto dapat dilihat publik. Upload hanya untuk email Google yang diizinkan.
+      allow read: if true;
+      allow create: if request.auth != null
+                    && request.auth.token.email_verified == true
+                    && request.auth.token.email in [
+                      'uploader1@example.com',
+                      'uploader2@example.com'
+                    ]
+                    && request.resource != null
+                    && request.resource.size < 8 * 1024 * 1024
+                    && request.resource.contentType.matches('image/(jpeg|png|webp|gif)');
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff5f7">
+<meta name="description" content="Our Little Photobooth — kenangan Yosia Pratama Simanjuntak dan Tio Gokmaria Br. Sagala.">
+<title>Our Little Photobooth — Yosia & Tio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="topbar"><a class="brand" href="#"><span>♡</span> our little archive</a><a class="top-link" href="#gallery">our memories <b>↗</b></a></header>
+<main>
+<section class="hero">
+ <div class="hero-copy">
+  <p class="eyebrow"><i></i> A LITTLE CORNER OF YOSIA & TIO</p>
+  <h1>Our little<br>world, <em>together.</em></h1>
+  <p class="intro">Untuk Yosia Pratama Simanjuntak dan Tio Gokmaria Br. Sagala — kumpulan potongan kecil cerita kita, tawa yang spontan, pose yang lucu, dan momen yang ingin disimpan lebih lama.</p>
+  <div class="names"><span>Yosia Pratama Simanjuntak</span><b>♡</b><span>Tio Gokmaria Br. Sagala</span></div>
+  <div class="hero-actions"><a class="primary-btn" href="#gallery">Jelajahi kenangan <span>↓</span></a><button class="text-btn" id="heroUpload">＋ Tambah foto</button></div>
+  <div class="tiny-note">♡ a thousand little moments, one favorite person</div>
+ </div>
+ <div class="hero-art" aria-label="Ilustrasi scrapbook foto">
+  <div class="spark s1">✳</div><div class="spark s2">✦</div><div class="spark s3">♡</div>
+  <div class="photo-stack back"><div class="fake-photo"><span>♡</span></div><small>little things, big feelings</small></div>
+  <div class="photo-stack front"><div class="sample-photo"><div class="sun"></div><div class="person p1"></div><div class="person p2"></div><div class="heart-doodle">♡</div></div><small>Yosia + Tio · always</small></div>
+  <div class="tape"></div><div class="round-sticker">you<br>are my<br>favorite ♡</div>
+ </div>
+</section>
+<section class="quote-strip"><span>“</span><p>Di antara banyak momen, ada beberapa yang selalu ingin kita ulang.</p><span>”</span></section>
+<section class="gallery-section" id="gallery">
+ <div class="section-heading"><div><p class="eyebrow">THE MEMORY WALL</p><h2>Our little <em>moments.</em></h2><p class="section-sub">Setiap foto punya cerita. Simpan semuanya di sini.</p></div><span class="count-pill" id="photoCount">0 memories</span></div>
+ <div class="upload-panel"><div class="upload-symbol">＋</div><div class="upload-copy"><strong>Kenangan baru untuk disimpan?</strong><span>Galeri bisa dilihat siapa saja. Upload hanya untuk akun Google yang diizinkan.</span></div><div class="auth-actions"><button class="upload-btn" id="signInBtn">Masuk dengan Google</button><button class="upload-btn secondary-btn" id="signOutBtn" hidden>Keluar</button><button class="upload-btn" id="uploadBtn" disabled>Upload foto <b>↗</b></button></div><input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple hidden></div>
+ <p class="notice" id="authStatus">Galeri sedang disiapkan. Upload memerlukan akun Google yang diizinkan.</p>
+ <p class="notice" id="notice">Setelah Firebase dikonfigurasi, foto akan tersedia bagi semua pengunjung.</p>
+ <div class="gallery" id="galleryGrid"><div class="empty-state" id="emptyState"><div class="empty-heart">♡</div><h3>Our story lives here.</h3><p>Belum ada foto di album ini.<br>Unggah photobooth pertama Yosia & Tio untuk memulai.</p></div></div>
+</section>
+<section class="closing-note"><div class="line"></div><div class="little-heart">♡</div><h2>To more silly poses,<br>and <em>favorite memories.</em></h2><p>Yosia & Tio · disimpan dengan cinta, dikenang selamanya.</p><div class="line"></div></section>
+</main>
+<footer><span>OUR LITTLE PHOTOBOOTH</span><span>YOSIA ♡ TIO</span><span id="year"></span></footer>
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose" aria-label="Tutup">×</button><button class="lightbox-arrow prev" id="prevPhoto" aria-label="Foto sebelumnya">‹</button><img id="lightboxImage" alt="Kenangan Yosia dan Tio"><button class="lightbox-arrow next" id="nextPhoto" aria-label="Foto berikutnya">›</button><p id="lightboxCaption"></p></div>
+<script type="module" src="app.js"></script>
+</body></html>
